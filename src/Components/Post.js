@@ -5,7 +5,7 @@ export default function Post({post}) {
     return <div class="card mb-4">
     <div class="row">
         <div class="col-sm-12 col-md-3">
-            <img class="img-fluid h-100 card-img-top" src={'http://localhost:8000/img/'+post.image}
+            <img class="img-fluid h-100 card-img-top" src={'https://blog-backend-0hsu.onrender.com/img/'+post.image}
                  alt="..." />
         </div>
         <div class="card-body col-md-8">
