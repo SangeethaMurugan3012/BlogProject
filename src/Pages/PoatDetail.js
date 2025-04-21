@@ -28,14 +28,14 @@ export default function PostDetail() {
         year: "numeric"
     }).format(new Date(post.createdAt))
 
-    return  <main class="container my-4">
-    <div class="row">
-        <article class="col-lg-8">
-            <h2 class="blog-post-title">{post.title}</h2>
-            <p class="blog-post-meta">{formattedDate} by <a href="#">{post.author}</a></p>
-            <img class="mb-3 img-fluid" src={post.image[0]} alt="this image not available" />
+    return  <main className="container my-4">
+    <div className="row">
+        <article className="col-lg-8">
+            <h2 className="blog-post-title">{post.title}</h2>
+            <p className="blog-post-meta">{formattedDate} by <a href="abc">{post.author}</a></p>
+            <img className="mb-3 img-fluid" src={post.image[0]} alt="this image not available" />
 
-            <div class="blog-post-content">
+            <div className="blog-post-content">
                 <p>{post.content}</p>
             </div>
         </article>

@@ -28,27 +28,27 @@ export default function PostList() {
     return <>
 
 	<main>
-		<div class="container mt-4">
-			<div class="row">
-				<div class="col-lg-8">
-					<h1 class="mb-4">Latest Posts</h1>
+		<div className="container mt-4">
+			<div className="row">
+				<div className="col-lg-8">
+					<h1 className="mb-4">Latest Posts</h1>
                     {
                         posts.length > 0 ? posts.map((post) => <Post post={post} />) : <h4>No posts available</h4>
                     }
 				</div>
-				<div class="col-lg-4">
-					<div class="card mb-4">
-						<div class="card-body">
-							<h5 class="card-title">About Me</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<div className="col-lg-4">
+					<div className="card mb-4">
+						<div className="card-body">
+							<h5 className="card-title">About Me</h5>
+							<p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
 					</div>
 
-					<div class="card mb-4">
-						<div class="card-body">
-							<h5 class="card-title">Categories</h5>
-							<ul class="list-group">
-								{categories.map(category => <li class="list-group-item"><Link to={`/posts/category/${category._id}`} class="text-black">{category.name}</Link></li>)}
+					<div className="card mb-4">
+						<div className="card-body">
+							<h5 className="card-title">Categories</h5>
+							<ul className="list-group">
+								{categories.map(category => <li className="list-group-item"><Link to={`/posts/category/${category._id}`} className="text-black">{category.name}</Link></li>)}
 							</ul>
 						</div>
 					</div>

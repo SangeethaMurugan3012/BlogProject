@@ -1,5 +1,4 @@
-// import logo from './logo.svg';
-// import './App.css';
+/
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import CategoryPosts from './Pages/CategoryPosts';
@@ -11,9 +10,7 @@ import{BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      {/* <CategoryPosts/> */}
-      {/* <Post/> */}
-     {/* <PostList/> */}
+     
 
      <Router>
       <Header/>
