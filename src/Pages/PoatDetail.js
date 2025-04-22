@@ -6,17 +6,17 @@ export default function PostDetail() {
     const [post, setPost] = useState(null);
     const { id } = useParams();
 
-    const fetchPost = async () => {
+    // const fetchPost = async () => {
+      
+    // }
+    useEffect(() => {
         try {
-            const response = await axios.get(`https://blog-backend-0hsu.onrender.com/api/posts/${id}`)
+            const response = axios.get(`https://blog-backend-0hsu.onrender.com/api/posts/${id}`)
             setPost(response.data);
         } catch (error) {
             console.error('Error fetching post:', error)
         }
-    }
-    useEffect(() => {
-        fetchPost();
-    }, [])
+    }, [id]);
 
     if (!post) {
         return <p>Loading...</p>
@@ -33,7 +33,7 @@ export default function PostDetail() {
         <article className="col-lg-8">
             <h2 className="blog-post-title">{post.title}</h2>
             <p className="blog-post-meta">{formattedDate} by <a href="abc">{post.author}</a></p>
-            <img className="mb-3 img-fluid" src={post.image[0]} alt="this image not available" />
+            <img className="mb-3 img-fluid" src={post.image[0]} alt="this img not available" />
 
             <div className="blog-post-content">
                 <p>{post.content}</p>
@@ -42,3 +42,6 @@ export default function PostDetail() {
     </div>
 </main>
 }
+
+
+
